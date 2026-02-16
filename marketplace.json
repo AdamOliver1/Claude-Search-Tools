@@ -12,11 +12,7 @@
       },
       "license": "MIT",
       "keywords": ["search", "web-search", "gemini", "perplexity", "research"],
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/AdamOliver1/claude-search-tools"
-      },
-      "installUrl": "https://github.com/AdamOliver1/claude-search-tools"
+      "repository": "https://github.com/AdamOliver1/claude-search-tools"
     }
   ]
 }

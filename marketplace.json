@@ -1,0 +1,22 @@
+{
+  "name": "adamoliver1-plugins",
+  "description": "Claude Code plugins by AdamOliver1",
+  "version": "1.0.0",
+  "plugins": [
+    {
+      "name": "search-tools",
+      "description": "Tiered web search skills — Gemini CLI (Tier 2) and Gemini+Perplexity deep search (Tier 3)",
+      "version": "1.0.0",
+      "author": {
+        "name": "AdamOliver1"
+      },
+      "license": "MIT",
+      "keywords": ["search", "web-search", "gemini", "perplexity", "research"],
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/AdamOliver1/claude-search-tools"
+      },
+      "installUrl": "https://github.com/AdamOliver1/claude-search-tools"
+    }
+  ]
+}

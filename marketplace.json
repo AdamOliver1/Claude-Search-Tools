@@ -1,10 +1,15 @@
 {
   "name": "adamoliver1-plugins",
+  "owner": {
+    "name": "Adam Oliver",
+    "email": "adamo@codeoasis.com"
+  },
   "description": "Claude Code plugins by AdamOliver1",
   "version": "1.0.0",
   "plugins": [
     {
       "name": "search-tools",
+      "source": "./",
       "description": "Tiered web search skills — Gemini CLI (Tier 2) and Gemini+Perplexity deep search (Tier 3)",
       "version": "1.0.0",
       "author": {

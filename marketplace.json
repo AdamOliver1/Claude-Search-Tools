@@ -8,7 +8,7 @@
       "description": "Tiered web search skills — Gemini CLI (Tier 2) and Gemini+Perplexity deep search (Tier 3)",
       "version": "1.0.0",
       "author": {
-        "name": "AdamOliver1"
+        "name": "Adam Oliver"
       },
       "license": "MIT",
       "keywords": ["search", "web-search", "gemini", "perplexity", "research"],

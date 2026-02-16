@@ -10,6 +10,26 @@ A Claude Code plugin providing tiered web search skills with graceful degradatio
 
 Both skills degrade gracefully — if a backend is unavailable, they fall back to whatever is available, down to Claude's built-in WebSearch.
 
+## Quick Start
+
+**Clone the plugin:**
+```bash
+git clone https://github.com/AdamOliver1/claude-search-tools.git ~/.claude/plugins/search-tools
+```
+
+**Install backends (optional):**
+```bash
+npm install -g @google/gemini-cli
+gemini  # Authenticate
+export PERPLEXITY_API_KEY="your-key-here"
+```
+
+**Use in Claude Code:**
+```
+/search-tools:gemini-search your query
+/search-tools:deep-search your query
+```
+
 ## Installation
 
 ### Option 1: Via Marketplace (Recommended)

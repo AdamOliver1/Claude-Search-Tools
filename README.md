@@ -17,11 +17,11 @@ Both skills degrade gracefully — if a backend is unavailable, they fall back t
 git clone https://github.com/AdamOliver1/claude-search-tools.git ~/.claude/plugins/search-tools
 ```
 
-**Install backends (optional):**
+**Install backends (optional — skills work without them):**
 ```bash
 npm install -g @google/gemini-cli
 gemini  # Authenticate
-export PERPLEXITY_API_KEY="your-key-here"
+# For Perplexity: see "Perplexity MCP" section below (optional)
 ```
 
 **Use in Claude Code:**
@@ -72,21 +72,23 @@ npm install -g @google/gemini-cli
 gemini  # Run once to authenticate
 ```
 
-### Perplexity MCP
+### Perplexity MCP (Optional)
 
-This plugin bundles a `.mcp.json` config for Perplexity. You just need to set your API key as an environment variable:
+Perplexity is **optional** — if not configured, the skills automatically fall back to Gemini only. The plugin does not bundle its own Perplexity MCP server to avoid conflicts with your existing setup. If you already have a Perplexity MCP server configured globally, the skills will use it automatically — no extra setup needed.
 
+To add Perplexity support, configure the official MCP server in your global Claude config:
+
+1. Run in Claude Code:
+```
+/mcp add perplexity -- npx -y @perplexity-ai/mcp-server
+```
+
+2. Set your API key in your shell profile (`~/.zshrc` or `~/.bashrc`):
 ```bash
 export PERPLEXITY_API_KEY="your-api-key-here"
 ```
 
 Get an API key at [perplexity.ai/settings/api](https://www.perplexity.ai/settings/api).
-
-**To persist the key**, add it to your shell profile (`~/.zshrc` or `~/.bashrc`):
-```bash
-echo 'export PERPLEXITY_API_KEY="your-api-key-here"' >> ~/.zshrc
-source ~/.zshrc
-```
 
 ## Usage
 
@@ -163,9 +165,10 @@ For complex research requiring high-confidence, cross-referenced results from mu
 - Check model access: some models require API keys or special access
 
 ### Perplexity not working
-- Verify API key is set: `echo $PERPLEXITY_API_KEY`
-- Check MCP server status in Claude Code
-- The skill will automatically fall back to Gemini-only if Perplexity fails
+- Verify the MCP server is configured: `/mcp` in Claude Code
+- Verify your API key is set: `echo $PERPLEXITY_API_KEY`
+- Get a key at [perplexity.ai/settings/api](https://www.perplexity.ai/settings/api)
+- If not configured, the skills automatically fall back to Gemini only
 
 ## License
 
